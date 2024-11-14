@@ -20,7 +20,9 @@ No terminal, dentro do diretório do seu projeto Laravel, execute o seguinte com
 
 composer require "laravel-reverb/reverb"
 
-##Publicar os arquivos de configuração: Após a instalação, publique os arquivos de configuração com o seguinte comando
+Publicar os arquivos de configuração:
+
+Após a instalação, publique os arquivos de configuração com o seguinte comando
 
 php artisan vendor:publish --provider="Reverb\ReverbServiceProvider"
 
