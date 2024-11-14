@@ -20,6 +20,10 @@ No terminal, dentro do diretório do seu projeto Laravel, execute o seguinte com
 
 composer require "laravel-reverb/reverb"
 
+php artisan broadcasting:install
+
+php artisan reverb:install
+
 Publicar os arquivos de configuração:
 
 Após a instalação, publique os arquivos de configuração com o seguinte comando
