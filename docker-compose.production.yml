@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  svc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "81:81"
+    depends_on:
+      - db
+    volumes:
+      - .:/var/wwwlear
+    restart: unless-stopped
+    env_file:
+      - .env
+  db:
+    image: mysql:latest
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - 3307:3306 
+
